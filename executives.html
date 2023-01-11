@@ -1,0 +1,457 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Grassroots Amateur Radio Club - Executives</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    onload="
+    
+        if(location.search !== '') getURLParams('page', 'dir', 'title', 'subTitle');
+        menuFocus();
+    "
+  >
+    <div class="head">
+      <div class="logoContainer">
+        <a href="index.html">
+          <img class="logo" src="assets\grassroots-logo.svg" alt="Grassroots
+          Amateur Radio Club Logo, and Link to Main Page"" />
+        </a>
+        <div id="menuBody" class="menu">
+          <div tabindex="0" id="about" class="menuItem">
+            <div class="menuRoot">About</div>
+            <div id="aboutSubMenu" class="menuContent">
+              <div
+                id="whoAreWe"
+                class="subMenuItem"
+                onmousedown="menuDown('whoAreWe')"
+                onmouseup="menuUp('WhoAreWe')"
+                onclick="location.href='about.html?page=aboutPage&dir=column&title=About&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="about.html?page=aboutPage&dir=column&title=About&subTitle"
+                >
+                  Who Are We
+                </a>
+              </div>
+              <div
+                id="exec"
+                class="subMenuItem"
+                onmousedown="menuDown('exec')"
+                onmouseup="menuUp('exec')"
+                onclick="location.href='executives.html?page=execPage&dir=column&title=Executives&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="executives.html?page=execPage&dir=column&title=Executives&subTitle"
+                >
+                  Executives
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div tabindex="0" id="equipment" class="menuItem">
+            <div class="menuRoot">Equipment</div>
+            <div id="equipSubMenu" class="menuContent">
+              <div
+                id="antennas"
+                class="subMenuItem"
+                onmousedown="menuDown('antennas')"
+                onmouseup="menuUp('antennas')"
+                onclick="location.href='equipment.html?page=antennaDisplay&dir=column&title=Club+Equipment&subTitle=Antennas' "
+              >
+                <a
+                  class="sM"
+                  href="equipment.html?page=antennaDisplay&dir=column&title=Club+Equipment&subTitle=Antennas"
+                >
+                  Antennas
+                </a>
+              </div>
+              <div
+                id="radios"
+                class="subMenuItem"
+                onmousedown="menuDown('radios')"
+                onmouseup="menuUp('radios')"
+                onclick="location.href='equipment.html?page=radioDisplay&dir=column&title=Club+Equipment&subTitle=Radios' "
+              >
+                <a
+                  class="sM"
+                  href="equipment.html?page=radioDisplay&dir=column&title=Club+Equipment&subTitle=Radios"
+                >
+                  Radios
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div tabindex="0" id="media" class="menuItem">
+            <div class="menuRoot">Media</div>
+            <div id="mediaSubMenu" class="menuContent">
+              <div
+                id="photos"
+                class="subMenuItem"
+                onmousedown="menuDown('photos')"
+                onmouseup="menuUp('photos')"
+                onclick="location.href='media.html?page=photoGallery&dir=column&title=Photos&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="media.html?page=photoGallery&dir=column&title=Photos&subTitle"
+                >
+                  Photos
+                </a>
+              </div>
+              <div
+                id="videos"
+                class="subMenuItem"
+                onmousedown="menuDown('videos')"
+                onmouseup="menuUp('videos')"
+                onclick="location.href='media.html?page=videoGallery&dir=column&title=Videos&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="media.html?page=videoGallery&dir=column&title=Videos&subTitle"
+                >
+                  Videos
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div tabindex="0" id="repeaters" class="menuItem">
+            <div class="menuRoot">Repeaters / Frequencies</div>
+            <div id="repeaterSubMenu" class="menuContent">
+              <div
+                id="vhf"
+                class="subMenuItem"
+                onmousedown="menuDown('vhf')"
+                onmouseup="menuUp('vhf')"
+                onclick="location.href='frequencies.html?page=vhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=VHF' "
+              >
+                <a
+                  class="sM"
+                  href="frequencies.html?page=vhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=VHF"
+                >
+                  VHF
+                </a>
+              </div>
+              <div
+                id="uhf"
+                class="subMenuItem"
+                onmousedown="menuDown('uhf')"
+                onmouseup="menuUp('uhf')"
+                onclick="location.href='frequencies.html?page=uhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=UHF' "
+              >
+                <a
+                  class="sM"
+                  href="frequencies.html?page=uhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=UHF"
+                >
+                  UHF
+                </a>
+              </div>
+              <div
+                id="hf"
+                class="subMenuItem"
+                onmousedown="menuDown('hf')"
+                onmouseup="menuUp('hf')"
+                onclick="location.href='frequencies.html?page=hfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=HF' "
+              >
+                <a
+                  class="sM"
+                  href="frequencies.html?page=hfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=HF"
+                >
+                  HF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact" class="menuItem">
+            <a
+              class="sM"
+              href="about.html?page=contactInfo&dir=column&title=Contact+Information&subTitle"
+            >
+              <div class="menuRoot">Contact</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="indexTitle">
+        <div class="headerText">
+          <h1 id="pageTitle" class="name"></h1>
+          <h3 id="headSubText" class="headSubText"></h3>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="execPage"
+      class="center"
+      style="display: flex; flex-direction: column"
+    >
+      <div class="execContent">
+        <div class="execPhotoFrame">
+          <a
+            href="executives.html?page=president&dir=column&title=Executive&subTitle=President"
+          >
+            <img
+              class="execPhoto"
+              src="assets\president.jpg"
+              alt="Grassroots President, Mike Ryan VO1AX"
+            />
+          </a>
+
+          <div class="execPhotoLable">
+            <span>President:</span><br /><span>Mike Ryan VO1AX</span>
+          </div>
+        </div>
+
+        <div class="execPhotoFrame">
+          <a
+            href="executives.html?page=vp&dir=column&title=Executive&subTitle=Vice+President"
+          >
+            <img
+              class="execPhoto"
+              src="assets\VP.jpg"
+              alt="Grassroots Vice President, Jackson Boyd, VO1JQB / VA1XN"
+            />
+          </a>
+
+          <div class="execPhotoLable">
+            <span>Vice President:</span><br /><span>Jackson Boyd </span
+            ><br /><span>VO1JQB / VA1XN</span>
+          </div>
+        </div>
+
+        <div class="execPhotoFrame">
+          <a
+            href="executives.html?page=treasurer&dir=column&title=Executive&subTitle=Treasurer"
+          >
+            <img
+              class="execPhoto"
+              src="assets\treasurer.jpg"
+              alt="Grassroots Treasurer, Annette Young"
+            />
+          </a>
+
+          <div class="execPhotoLable">
+            <span>Treasurer:</span><br /><span>Annette Young</span>
+          </div>
+        </div>
+
+        <div class="execPhotoFrame">
+          <a
+            href="executives.html?page=secretary&dir=column&title=Executive&subTitle=Secretary"
+          >
+            <img
+              class="execPhoto"
+              src="assets\profilePlaceHolder.png"
+              alt="Grassroots Secretary, Michael Smith VO1DEX"
+            />
+          </a>
+
+          <div class="execPhotoLable">
+            <span>Secretary:</span><br /><span>Michael Smith VO1DEX</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="backLink" style="margin: auto auto 1rem auto" href="index.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="president" class="center" style="flex-direction: column">
+      <div class="execContent">
+        <div class="execPhotoFrame" style="width: 40rem">
+          <img
+            class="bioPhoto"
+            src="assets\president.jpg"
+            alt="Grassroots President, Mike Ryan VO1AX"
+          />
+        </div>
+
+        <div class="innerContent">
+          <h3 class="contentHead">Mike Ryan VO1AX</h3>
+          <h2 class="contentHead">President</h2>
+          <div class="contentText">
+            <p>
+              Hi. I'm the President of the Grassroots Amateur Radio Club and
+              have been licenced since 2001 with my 3 letter call VO1RYN. In
+              2012, I switched to VO1AX. I'm a HF DXer, contester, and Mobile
+              Operator. I'm active on 80 thru 10m, 40/20 mobile, SSB and FT8/4
+              modes. My home station consists of a Kenwood TS-590SG, Ameritron
+              ALS 1300 HF amplifier and MFJ 998 antenna tuner. My antennas are a
+              Mosley Classic 33, turned with a Yaesu G800 DXA rotater, and an
+              OCF dipole both on a 32' heavy duty guyed tower. My mobile is a
+              Kenwood TS-570DG on the folded down back seat of our 2018 Kia
+              Soul. I use Shark Antenna hamsticks for 80,40,20,15 and one for
+              11M mounted on the hood. Check out my YouTube Channel under VO1AX.
+              I QSL via LOTW, digital QSL or just send me an email to say hi.
+              You can see pictures of my equipment under the gallery tab.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a class="backLink" href="executives.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="vp" class="center" style="flex-direction: column">
+      <div class="execContent">
+        <div class="execPhotoFrame" style="width: 40rem">
+          <img
+            class="bioPhoto"
+            src="assets\VP.jpg"
+            alt="Grassroots Vice President, Jackson Boyd VO1JQB / VO1XN"
+          />
+        </div>
+
+        <div class="innerContent">
+          <h3 class="contentHead">Jackson Boyd VO1JQB / VA1XN</h3>
+          <h2 class="contentHead">Vice President</h2>
+          <div class="contentText">
+            <p>
+              Hi, I'm the Vice President of the Grassroots Amateur Radio Club.
+              I've been licenced since early 2016. I picked up the callsign
+              VO1JQB as a temporary callsign but ended up getting attached and
+              I've been running it ever since. I also picked up VA1XN for
+              operation in Nova Scotia. My station consists of a Yaesu FT-991
+              with a set of Ham sticks for 80 thru 10 meters I also have a Yaesu
+              FT-102 with all the accessories except the amplifier. I'm
+              currently an actively serving member of the Royal Canadian Navy so
+              occasionally I may be absent to meetings while deployed, however I
+              do check in from time to time when available. You can check out my
+              YouTube channel under VO1JQB where I post all sorts of content
+              including a mini podcast series done by our founding members, as
+              well as many videos of contests and antenna projects over the
+              years. If you would like to contact me, feel free to send me a
+              message via QRZ or E-mail. Cheers!
+            </p>
+          </div>
+        </div>
+      </div>
+      <a class="backLink" href="executives.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button, Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="treasurer" class="center" style="flex-direction: column">
+      <div class="execContent">
+        <div class="execPhotoFrame" style="width: 40rem">
+          <img
+            class="bioPhoto"
+            src="assets\treasurer.jpg"
+            alt="Grassroots Treasure, Annette Youngr"
+          />
+        </div>
+        <div class="innerContent">
+          <h3 class="contentHead">Annette Young</h3>
+          <h2 class="contentHead">Treasurer</h2>
+          <div class="contentText">
+            <p>
+              Annette is the President's XYL. Although not a HAM operator, she
+              does wear many hats and is a vital member of the club. She's
+              Treasurer, Taxi Driver, Chief Cook and Bottle Washer, and steps in
+              where and whenever needed.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a class="backLink" href="executives.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="secretary" class="center" style="flex-direction: column">
+      <div class="execContent">
+        <div class="execPhotoFrame" style="width: 40rem">
+          <img
+            class="bioPhoto"
+            src="assets\profilePlaceHolder.png"
+            alt="Grassroots Secretary, Michael Smith VO1DEX"
+          />
+        </div>
+        <div class="innerContent">
+          <h3 class="contentHead">Michael Smith VO1DEX</h3>
+          <h2 class="contentHead">Secretary</h2>
+          <div class="contentText">
+            <p>
+              Hi. I'm the Secretary of the Grassroots Amateur Radio Club and
+              have been licenced since 2020 as VO1DEX. I'm mostly a listener on
+              all bands but I am usually active on 2M, 20M and 40M when the
+              noise isn't so bad. When contesting i am usually operating voice
+              or digital modes. I don't have an HF station setup as of yet, but
+              I do operate portable from my Yaesu FT-65R. Feel free to check out
+              my QRZ if you see me out there!
+            </p>
+          </div>
+        </div>
+      </div>
+      <a class="backLink" href="executives.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div class="footer">
+      <a href="https://www.facebook.com/VO1GRC/"
+        ><img
+          class="social"
+          src="assets\fb-social.svg"
+          alt="Facebook icon linking to GRC Facebook Page"
+      /></a>
+      <a
+        href="https://www.youtube.com/channel/UCJTjzJd5jBDLwpyy0QNRT-Q/featured"
+      >
+        <img
+          class="social"
+          src="assets\yt-social.svg"
+          alt="YouTube icon, liking to a YouTube channel"
+        />
+      </a>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>

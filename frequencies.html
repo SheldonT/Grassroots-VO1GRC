@@ -1,0 +1,519 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Grassroots Amateur Radio Club</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    onload="
+    
+        if(location.search !== '') getURLParams('page', 'dir', 'title', 'subTitle');
+        menuFocus();
+    "
+  >
+    <div class="head">
+      <div class="logoContainer">
+        <a href="index.html">
+          <img
+            class="logo"
+            src="assets\grassroots-logo.svg"
+            alt="Place holder radio graphic for GRC Logo."
+          />
+        </a>
+        <div id="menuBody" class="menu">
+          <div tabindex="0" id="about" class="menuItem">
+            <div class="menuRoot">About</div>
+            <div id="aboutSubMenu" class="menuContent">
+              <div
+                id="whoAreWe"
+                class="subMenuItem"
+                onmousedown="menuDown('whoAreWe')"
+                onmouseup="menuUp('WhoAreWe')"
+                onclick="location.href='about.html?page=aboutPage&dir=column&title=About&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="about.html?page=aboutPage&dir=column&title=About&subTitle"
+                >
+                  Who Are We
+                </a>
+              </div>
+              <div
+                id="exec"
+                class="subMenuItem"
+                onmousedown="menuDown('exec')"
+                onmouseup="menuUp('exec')"
+                onclick="location.href='executives.html?page=execPage&dir=column&title=Executives&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="executives.html?page=execPage&dir=column&title=Executives&subTitle"
+                >
+                  Executives
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div tabindex="0" id="equipment" class="menuItem">
+            <div class="menuRoot">Equipment</div>
+            <div id="equipSubMenu" class="menuContent">
+              <div
+                id="antennas"
+                class="subMenuItem"
+                onmousedown="menuDown('antennas')"
+                onmouseup="menuUp('antennas')"
+                onclick="location.href='equipment.html?page=antennaDisplay&dir=column&title=Club+Equipment&subTitle=Antennas' "
+              >
+                <a
+                  class="sM"
+                  href="equipment.html?page=antennaDisplay&dir=column&title=Club+Equipment&subTitle=Antennas"
+                >
+                  Antennas
+                </a>
+              </div>
+              <div
+                id="radios"
+                class="subMenuItem"
+                onmousedown="menuDown('radios')"
+                onmouseup="menuUp('radios')"
+                onclick="location.href='equipment.html?page=radioDisplay&dir=column&title=Club+Equipment&subTitle=Radios' "
+              >
+                <a
+                  class="sM"
+                  href="equipment.html?page=radioDisplay&dir=column&title=Club+Equipment&subTitle=Radios"
+                >
+                  Radios
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div tabindex="0" id="media" class="menuItem">
+            <div class="menuRoot">Media</div>
+            <div id="mediaSubMenu" class="menuContent">
+              <div
+                id="photos"
+                class="subMenuItem"
+                onmousedown="menuDown('photos')"
+                onmouseup="menuUp('photos')"
+                onclick="location.href='media.html?page=photoGallery&dir=column&title=Photos&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="media.html?page=photoGallery&dir=column&title=Photos&subTitle"
+                >
+                  Photos
+                </a>
+              </div>
+              <div
+                id="videos"
+                class="subMenuItem"
+                onmousedown="menuDown('videos')"
+                onmouseup="menuUp('videos')"
+                onclick="location.href='media.html?page=videoGallery&dir=column&title=Videos&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="media.html?page=videoGallery&dir=column&title=Videos&subTitle"
+                >
+                  Videos
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div tabindex="0" id="repeaters" class="menuItem">
+            <div class="menuRoot">Repeaters / Frequencies</div>
+            <div id="repeaterSubMenu" class="menuContent">
+              <div
+                id="vhf"
+                class="subMenuItem"
+                onmousedown="menuDown('vhf')"
+                onmouseup="menuUp('vhf')"
+                onclick="location.href='frequencies.html?page=vhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=VHF' "
+              >
+                <a
+                  class="sM"
+                  href="frequencies.html?page=vhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=VHF"
+                >
+                  VHF
+                </a>
+              </div>
+              <div
+                id="uhf"
+                class="subMenuItem"
+                onmousedown="menuDown('uhf')"
+                onmouseup="menuUp('uhf')"
+                onclick="location.href='frequencies.html?page=uhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=UHF' "
+              >
+                <a
+                  class="sM"
+                  href="frequencies.html?page=uhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=UHF"
+                >
+                  UHF
+                </a>
+              </div>
+              <div
+                id="hf"
+                class="subMenuItem"
+                onmousedown="menuDown('hf')"
+                onmouseup="menuUp('hf')"
+                onclick="location.href='frequencies.html?page=hfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=HF' "
+              >
+                <a
+                  class="sM"
+                  href="frequencies.html?page=hfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=HF"
+                >
+                  HF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact" class="menuItem">
+            <a
+              class="sM"
+              href="about.html?page=contactInfo&dir=column&title=Contact+Information&subTitle"
+            >
+              <div class="menuRoot">Contact</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="indexTitle">
+        <div class="headerText">
+          <h1 id="pageTitle" class="name"></h1>
+          <h3 id="headSubText" class="headSubText"></h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="vhfFreq" class="center" style="align-items: center">
+      <div class="innerContent" style="max-width: 100rem">
+        <h2 class="contentHead">VHF Repeaters</h2>
+        <div class="contentText">
+          <table>
+            <tr>
+              <th>Repeater Callsign</th>
+              <th>Mode</th>
+              <th>Frequency (MHz)</th>
+              <th>Shift (MHz)</th>
+              <th>Location</th>
+              <th>Comments</th>
+            </tr>
+            <tr>
+              <td>VO1NTV</td>
+              <td>FM</td>
+              <td>147.060</td>
+              <td>-0.600</td>
+              <td>St. John's</td>
+              <td class="comments">
+                Shift direction doesn't follow normal convension. Don't rely on
+                automatic repeater shift function on your radio.
+              </td>
+            </tr>
+            <tr>
+              <td>VO1GT</td>
+              <td>FM</td>
+              <td>146.940</td>
+              <td>-0.600</td>
+              <td>St. John's</td>
+              <td class="comments">
+                Connected to the NL linked repeater system and ECHOLINK.
+              </td>
+            </tr>
+            <tr>
+              <td>VO1RCR</td>
+              <td>FM</td>
+              <td>147.345</td>
+              <td>+0.600</td>
+              <td>St. John's</td>
+              <td class="comments">CTCSS Tone of 100 Hz</td>
+            </tr>
+            <tr>
+              <td>VO1UKZ</td>
+              <td>FM</td>
+              <td>147.420</td>
+              <td>none</td>
+              <td>St. John's</td>
+              <td class="comments">
+                CTCSS Tone of 100 Hz. Connected to ECHOLINK node 355800
+                (*DODROPIN*). See
+                <a href="http://www.dodropin.net/">http://www.dodropin.net/</a>
+                for more information.
+              </td>
+            </tr>
+            <tr>
+              <td>VO1TZ</td>
+              <td>FM / C4FM</td>
+              <td>145.090</td>
+              <td>+0.600</td>
+              <td>St. John's</td>
+              <td class="comments">CTCSS Tone of 100 Hz for analogue FM</td>
+            </tr>
+            <tr>
+              <td>VO1BT</td>
+              <td>FM</td>
+              <td>146.760</td>
+              <td>-0.600</td>
+              <td>Holyrood</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1ARG</td>
+              <td>FM</td>
+              <td>146.820</td>
+              <td>-0.600</td>
+              <td>Argentia</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1MST</td>
+              <td>FM</td>
+              <td>146.850</td>
+              <td>-0.600</td>
+              <td>Marystown</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1GBR</td>
+              <td>FM</td>
+              <td>146.940</td>
+              <td>-0.600</td>
+              <td>Grand Bank</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1SHR</td>
+              <td>FM</td>
+              <td>146.660</td>
+              <td>-0.600</td>
+              <td>Shoal Harbour</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1GLR</td>
+              <td>FM</td>
+              <td>147.180</td>
+              <td>+0.600</td>
+              <td>Gander Lake</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1LJR</td>
+              <td>FM</td>
+              <td>147.320</td>
+              <td>+0.600</td>
+              <td>Lewisporte Junction</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1GFR</td>
+              <td>FM</td>
+              <td>146.910</td>
+              <td>-0.600</td>
+              <td>Grand Falls-Windsor</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1BLR</td>
+              <td>FM</td>
+              <td>146.640</td>
+              <td>-0.600</td>
+              <td>Birchy Lake (Deer Lake)</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1MO</td>
+              <td>FM</td>
+              <td>147.360</td>
+              <td>+0.600</td>
+              <td>Corner Brook</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO1STA</td>
+              <td>FM</td>
+              <td>147.965</td>
+              <td>-0.600</td>
+              <td>St. Anthony</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+            <tr>
+              <td>VO2ET</td>
+              <td>FM</td>
+              <td>147.510</td>
+              <td>none</td>
+              <td>Labrador City</td>
+              <td class="comments">Connected to NL Linked Repeater System</td>
+            </tr>
+          </table>
+          <p>
+            The Caribou Net is hosted on the NL linked repeater system every
+            evening at 21:00 NL time.
+          </p>
+        </div>
+      </div>
+      <a class="backLink" href="index.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="uhfFreq" class="center" style="align-items: center">
+      <div class="innerContent" style="max-width: 100rem">
+        <h2 class="contentHead">UHF Repeaters</h2>
+        <div class="contentText">
+          <table>
+            <tr>
+              <th>Repeater Callsign</th>
+              <th>Mode</th>
+              <th>Frequency (MHz)</th>
+              <th>Shift (MHz)</th>
+              <th>Location</th>
+              <th>Comments</th>
+            </tr>
+            <tr>
+              <td>VO1XMT</td>
+              <td>FM</td>
+              <td>442.250</td>
+              <td>+5.00</td>
+              <td>St. John's</td>
+              <td class="comments">
+                Hosted by the Grassroots Amateur Radio Club. CTCSS Tone of 114.8
+                Hz for access. Connected to the AllStar Network. Go
+                <a
+                  href="https://www.repeaterbook.com/repeaters/details.php?state_id=CA05&ID=19066"
+                  >here</a
+                >
+                for more information.
+              </td>
+            </tr>
+            <tr>
+              <td>VO1NTV</td>
+              <td>FM</td>
+              <td>444.600</td>
+              <td>+5.00</td>
+              <td>St. John's</td>
+              <td class="comments">CTCSS Tone of 100 Hz for access.</td>
+            </tr>
+            <tr>
+              <td>VO1GFR</td>
+              <td>DMR</td>
+              <td>444.000</td>
+              <td>+5.00</td>
+              <td>Grand Falls - Windsor</td>
+              <td class="comments">CC 11</td>
+            </tr>
+            <tr>
+              <td>VO1UHF</td>
+              <td>DMR</td>
+              <td>443.600</td>
+              <td>+5.00</td>
+              <td>St. John's</td>
+              <td class="comments">CC 5</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <a class="backLink" href="index.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="hfFreq" class="center" style="align-items: center">
+      <div class="innerContent" style="max-width: 100rem">
+        <h2 class="contentHead">HF Frequencies</h2>
+        <div class="contentText">
+          <table>
+            <tr>
+              <th>Use</th>
+              <th>Mode</th>
+              <th>Frequency (MHz)</th>
+              <th>Comments</th>
+            </tr>
+            <tr>
+              <td>Maritime Mobile Service Net</td>
+              <td>LSB</td>
+              <td>14.300</td>
+              <td class="comments">13:30 to 22:30 NL time</td>
+            </tr>
+            <tr>
+              <td>Hurricane Watch Net (Day)</td>
+              <td>USB</td>
+              <td>14.325</td>
+              <td class="comments">When Required</td>
+            </tr>
+            <tr>
+              <td>Hurricane Watch Net (Night)</td>
+              <td>LSB</td>
+              <td>7.268</td>
+              <td class="comments">When Required</td>
+            </tr>
+            <tr>
+              <td>Local Nets</td>
+              <td>LSB</td>
+              <td>3.740</td>
+              <td class="comments">
+                The Cod Jigger Net at 09:30 NL time , and the NL Evening Traffic
+                Net at 19:00 NL time.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <a class="backLink" href="index.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page"
+        />
+      </a>
+    </div>
+
+    <div class="footer">
+      <a href="https://www.facebook.com/VO1GRC/"
+        ><img
+          class="social"
+          src="assets\fb-social.svg"
+          alt="Facebook icon linking to GRC Facebook Page"
+      /></a>
+      <a
+        href="https://www.youtube.com/channel/UCJTjzJd5jBDLwpyy0QNRT-Q/featured"
+      >
+        <img
+          class="social"
+          src="assets\yt-social.svg"
+          alt="YouTube icon, liking to a YouTube channel"
+        />
+      </a>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

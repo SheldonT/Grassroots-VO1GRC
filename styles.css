@@ -1,0 +1,314 @@
+/** @format */
+
+:root {
+  --pageBackground: #2f6690;
+  --pageCenter: #3a7ca5;
+
+  --menuHighlight: #8dc540; /*#ffd100;*/
+  --menuHover: #ffee32;
+
+  --menuContent: #16425b;
+  --textColor: #d9dcd6;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: var(--pageBackground);
+  color: var(--textColor);
+  height: 100vh;
+}
+
+.head {
+  display: flex;
+  background: linear-gradient(rgba(47, 102, 144, 0.4), rgba(47, 102, 144, 0.1)),
+    url("assets/hero-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 0 5rem 0;
+}
+
+.headIndex {
+  display: flex;
+  background: linear-gradient(rgba(47, 102, 144, 0.4), rgba(47, 102, 144, 0.1)),
+    url("assets/mainPage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.callToAction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.CTAButton {
+  background-color: var(--pageBackground);
+  margin: 0 2rem 0 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.CTAButton:hover {
+  background-color: var(--menuContent);
+}
+
+a.CTA:link {
+  color: var(--menuHighlight);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+a.CTA:active {
+  color: var(--menuHighlight);
+}
+
+a.CTA:visited {
+  color: var(--menuHighlight);
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 5rem 2rem 10rem;
+  height: 10rem;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0 auto auto;
+}
+
+.menuItem {
+  /*menu item with relative positioning. Required to keep the */
+  position: relative;
+  display: inline-block;
+  margin: auto 0 0 2rem;
+}
+
+.menuRoot {
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 0 0.2rem 0.5rem 1rem;
+  margin: 0 1rem 0 0;
+  border-style: none none solid none;
+  border-width: 0.5rem;
+  border-color: var(--menuHighlight);
+}
+
+.menuContent {
+  display: none;
+  position: absolute;
+  background-color: var(--menuContent);
+  min-width: 10rem;
+  max-width: 15rem;
+}
+
+.subMenuItem {
+  font-size: 1.4rem;
+  padding: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.indexTitle {
+  display: flex;
+  flex-direction: row;
+  margin: 8rem 0 5rem 0;
+}
+
+.indexTitleMain {
+  display: flex;
+  flex-direction: row;
+  margin: 15rem 0 5rem 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0 3rem 0;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.name {
+  margin-bottom: 1rem;
+}
+
+.headSubText {
+  margin-top: 0;
+}
+
+.center {
+  display: none;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  background-color: var(--pageCenter);
+  font-size: 1.6rem;
+}
+
+.backLink {
+  margin: 2rem auto 5rem auto;
+}
+
+.backImage {
+  height: 5rem;
+  width: auto;
+}
+
+.innerContent {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--menuContent);
+  border-style: solid;
+  border-color: var(--menuHighlight);
+  color: var(--textColor);
+  border-width: 0.2rem;
+  border-radius: 5rem 1rem 1rem 1rem;
+  max-width: 80rem;
+  min-width: 30rem;
+
+  margin: 5rem 5rem auto 5rem;
+  padding-top: 2rem;
+}
+
+.contentHead {
+  color: var(--menuHighlight);
+  margin: 0 auto 0 2rem;
+}
+
+.contentText {
+  padding: 0 2rem 2rem 2rem;
+  line-height: 1.5;
+}
+
+.execBio {
+  border-width: 0.2rem;
+  max-width: 100rem;
+  padding: 0 2rem 2rem 2rem;
+  line-height: 2rem;
+}
+
+.bioPhoto {
+  width: inherit;
+  height: auto;
+}
+
+.execContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--pageCenter);
+  /*font-size: 1.6rem;*/
+}
+
+.execPhotoFrame {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--menuContent);
+  border-style: solid;
+  border-color: var(--menuHighlight);
+  color: var(--textColor);
+  border-width: 0.2rem;
+  border-radius: 5rem 1rem 1rem 1rem;
+  overflow: hidden;
+  margin: 5rem 2rem auto 2rem;
+  text-align: center;
+}
+
+.execPhoto {
+  width: 20rem;
+  height: auto;
+}
+
+.execPhotoLable {
+  overflow-wrap: break-word;
+  height: auto;
+  text-align: left;
+  margin: 1rem auto 1rem 2rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social {
+  width: 3rem;
+  margin: 2rem 1rem 2rem 1rem;
+}
+
+table {
+  text-align: center;
+  margin: 5rem auto 2rem auto;
+}
+
+th {
+  border-style: none none solid none;
+  border-color: var(--menuHighlight);
+  border-width: 0.5rem;
+}
+
+td {
+  padding: 0 2rem 0 2rem;
+  border-style: none none solid none;
+  border-color: var(--menuHighlight);
+  border-width: 0.1rem;
+}
+
+.comments {
+  text-align: left;
+}
+
+.menuItem:hover .menuRoot {
+  border-color: var(--menuHover);
+}
+
+.subMenuItem:hover {
+  cursor: pointer;
+  border-style: none none solid none;
+  border-width: 0.1rem;
+  border-color: var(--menuHover);
+}
+
+a.sM:link {
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--textColor);
+}
+
+a:visited {
+  color: var(--textColor);
+}
+
+a:active {
+  color: var(--menuHover);
+}

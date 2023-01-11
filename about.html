@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" />
+
+        
+        <title> Grassroots Amateur Radio Club </title>
+        <link rel="stylesheet" href="styles.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body onload="
+    
+        if(location.search !== '') {
+            getURLParams('page', 'dir', 'title', 'subTitle');
+        }
+
+        menuFocus();
+
+    ">
+        <div class="head">
+            <div class="logoContainer">
+                <a href="index.html">
+                    <img class="logo" src="assets\grassroots-logo.svg" alt="Place holder radio graphic for GRC Logo." />
+                </a>
+                <div id="menuBody" class="menu">
+                    <div tabindex="0" id="about" class="menuItem">
+                        <div class="menuRoot">About</div>
+                        <div id="aboutSubMenu" class="menuContent">
+                            <div id="whoAreWe" class="subMenuItem" onmousedown="menuDown('whoAreWe')" onmouseup="menuUp('WhoAreWe')" onclick="location.href='about.html?page=aboutPage&dir=column&title=About&subTitle' "> 
+                                <a class="sM" href="about.html?page=aboutPage&dir=column&title=About&subTitle"> Who Are We </a> 
+                            </div>
+
+                            <div id="meetings" class="subMenuItem" onmousedown="menuDown('meetings')" onmouseup="menuUp('meetings')" onclick="location.href='about.html?page=meetingsPage&dir=column&title=Monthly+Meetings&subTitle' "> 
+                                <a class="sM" href="about.html?page=meetingsPage&dir=column&title=Monthly+Meetings&subTitle"> Meetings </a> 
+                            </div>
+
+                            <div id="exec" class="subMenuItem" onmousedown="menuDown('exec')" onmouseup="menuUp('exec')" onclick="location.href='executives.html?page=execPage&dir=column&title=Executives&subTitle' ">
+                                <a class="sM" href="executives.html?page=execPage&dir=column&title=Executives&subTitle"> Executives </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div tabindex="0" id="equipment" class="menuItem">
+                        <div class="menuRoot">Equipment</div>
+                        <div id="equipSubMenu" class="menuContent">
+                            <div id="antennas" class="subMenuItem" onmousedown="menuDown('antennas')" onmouseup="menuUp('antennas')" onclick="location.href='equipment.html?page=antennaDisplay&dir=column&title=Club+Equipment&subTitle=Antennas' "> 
+                                <a class="sM"  href="equipment.html?page=antennaDisplay&dir=column&title=Club+Equipment&subTitle=Antennas"> Antennas </a>
+                            </div>
+                            <div id="radios" class="subMenuItem" onmousedown="menuDown('radios')" onmouseup="menuUp('radios')" onclick="location.href='equipment.html?page=radioDisplay&dir=column&title=Club+Equipment&subTitle=Radios' ">
+                                <a class="sM"  href="equipment.html?page=radioDisplay&dir=column&title=Club+Equipment&subTitle=Radios" > Radios </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div tabindex="0" id="media" class="menuItem">
+                        <div class="menuRoot">Media</div>
+                        <div id="mediaSubMenu" class="menuContent">
+                            <div id="photos" class="subMenuItem" onmousedown="menuDown('photos')" onmouseup="menuUp('photos')" onclick="location.href='media.html?page=photoGallery&dir=column&title=Photos&subTitle' ">
+                                <a class="sM"  href="media.html?page=photoGallery&dir=column&title=Photos&subTitle"> Photos </a>
+                            </div>
+                            <div id="videos" class="subMenuItem" onmousedown="menuDown('videos')" onmouseup="menuUp('videos')" onclick="location.href='media.html?page=videoGallery&dir=column&title=Videos&subTitle' ">
+                                <a class="sM"  href="media.html?page=videoGallery&dir=column&title=Videos&subTitle"> Videos </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div tabindex="0" id="repeaters"class="menuItem">
+                        <div class="menuRoot">Repeaters / Frequencies</div>
+                        <div id="repeaterSubMenu" class="menuContent">
+                            <div id="vhf" class="subMenuItem" onmousedown="menuDown('vhf')" onmouseup="menuUp('vhf')" onclick="location.href='frequencies.html?page=vhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=VHF' ">
+                                <a class="sM"  href="frequencies.html?page=vhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=VHF" > VHF </a>
+                            </div>
+                            <div id="uhf" class="subMenuItem" onmousedown="menuDown('uhf')" onmouseup="menuUp('uhf')" onclick="location.href='frequencies.html?page=uhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=UHF' ">
+                                <a class="sM"  href="frequencies.html?page=uhfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=UHF" > UHF </a> 
+                            </div>
+                            <div id="hf" class="subMenuItem" onmousedown="menuDown('hf')" onmouseup="menuUp('hf')" onclick="location.href='frequencies.html?page=hfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=HF' ">
+                                <a class="sM"  href="frequencies.html?page=hfFreq&dir=column&title=Local+Repeaters+and+Frequencies&subTitle=HF"> HF </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="contact" class="menuItem">
+                        <a class="sM" href="about.html?page=contactInfo&dir=column&title=Contact+Information&subTitle"> <div class="menuRoot">Contact</div> </a>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <div class="indexTitle">
+                <div class="headerText">
+                    <h1 id="pageTitle" class="name"></h1>
+                    <h3 id="headSubText" class="headSubText"></h3>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="aboutPage" class="center" style="display: none; align-items: center;">
+            <div class="innerContent">
+                <div class="contentHead">
+                    <h2>History of the Grassroots Amateur Radio Group</h2>
+                </div>
+                <div class="contentText">
+                    <p>The Grassroots Amateur Radio Group was founded in January of 2018, initially as a contesting group between 3 of it's founders, Mike VO1AX, Aaron, VO1FOX/IV and Jaxson, VO1JQB/VA1XN. VO1GRC was purchased to have a singular call sign for Amateur Radio contesting awards so that no particular member would receive all the glory. VO1GRC was also used for events such as Field Day, light house activation, and any other events where a radio came along.</p>
+                    <p>Later, the group created it's own special event commemorating the Truxton and Pollux  American Naval disaster, held each year from January 18, to March 18th. Initially, the club used special event callsigns such as VD1NUQK and VD1TP. Later, they bought the callsign VO1TAP which is exclusively used during that time to commemorate the disaster.</p>
+                    <p>In 2020, the Grassroots Amateur Radio Group earned official club status and it continues to promote the interest and fellowship of HAM Radio, going back to the Grassroots of Amateur Radio, actually participating instead of just talking about doing, hence our name. </p>
+                    <p>Our membership consists of both local hams along with members in Nova Scotia. We meet once a month on our Discord channel, which allows all our members to perticipate, regardless of where they are in the world. If you would like to attend our meetings, go <a href="about.html?page=meetingsPage&dir=column&title=Monthly+Meetings&subTitle">here</a> for instructions.</p>
+
+                </div>
+            </div>
+            <a class="backLink" href="index.html"> <img class="backImage" src="assets\back.png" alt="Back" /> </a>
+        </div>
+
+
+        <div id="meetingsPage" class="center" style="display: none; align-items: center;">
+            <div class="innerContent">
+                <div class="contentHead">
+                    <h2>Meeting Schedule</h2>
+                </div>
+                <div class="contentText">
+                    <p> Grassroots Amateur Radio Club meet virtually on Discord on the first Monday of every month at 8:30pm NL time, with the exception of holidays.</p>
+                    <p> Send an email to <a href="mailto:vo1grc2018@gmail.com">vo1grc2018 at gmail.com</a> to request an invite to our Discord channel.</p>
+                </div>
+            </div>
+            <a class="backLink" href="index.html"> <img class="backImage" src="assets\back.png" alt="Back" /> </a>
+        </div>
+
+
+        <div id="contactInfo" class="center" style="display: none; align-items: center;" >
+
+            <div class="innerContent">
+                <div class="contentHead">
+                    <h2>Mailing Address</h2>
+                </div>
+                <div class="contentText">
+                    <span><b>Grassroots Ham Radio Club - VO1GRC</b></br>
+                    PO Box 335</br>
+                    English Cove Rd</br>
+                    Marysvale, NL</br>
+                    A0A 2Z0</span>
+                </div>
+                <div class="contentHead">
+                    <h2>E-Mail</h2>
+                </div>
+                <div class="contentText">
+                    <span><a href="mailto:vo1grc2018@gmail.com"> vo1grc2018 at gmail.com </a></span>
+                </div>
+            </div>
+
+            <a class="backLink" href="index.html"> <img class="backImage" src="assets\back.png" alt="Back" /> </a>
+        </div>
+
+        <div class="footer">
+            <a href="https://www.facebook.com/VO1GRC/"><img class="social" src="assets\fb-social.svg" alt="Facebook icon linking to GRC Facebook Page" /></a>
+            <a href="https://www.youtube.com/channel/UCJTjzJd5jBDLwpyy0QNRT-Q/featured"> <img class="social" src="assets\yt-social.svg" alt="YouTube icon, liking to a YouTube channel" /> </a>
+        </div>
+    </body>
+    <script src="script.js"></script>
+
+</html>
+
+
