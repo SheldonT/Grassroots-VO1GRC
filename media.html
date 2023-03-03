@@ -137,6 +137,20 @@
                   Videos
                 </a>
               </div>
+              <div
+                id="downloads"
+                class="subMenuItem"
+                onmousedown="menuDown('downloads')"
+                onmouseup="menuUp('downloads')"
+                onclick="location.href='media.html?page=fileDownloads&dir=column&title=Downloads&subTitle' "
+              >
+                <a
+                  class="sM"
+                  href="media.html?page=fileDownloads&dir=column&title=Downloads&subTitle"
+                >
+                  Downloads
+                </a>
+              </div>
             </div>
           </div>
 
@@ -216,6 +230,7 @@
           <ul>
             <li>
               <a
+                id="pageLinks"
                 href="media.html?page=fieldDay22&dir=column&title=Photos&subTitle=Field+Day+2022"
               >
                 Field Day 2022</a
@@ -223,6 +238,7 @@
             </li>
             <li>
               <a
+                id="pageLinks"
                 href="media.html?page=homeQTH&dir=column&title=Photos&subTitle=Grassroots+Home+Station"
               >
                 Grassroots Home Station</a
@@ -435,6 +451,43 @@
           class="backImage"
           src="assets\back.png"
           alt="Button. Returns to main page."
+        />
+      </a>
+    </div>
+
+    <div id="fileDownloads" class="center" style="align-items: center">
+      <div class="innerContent">
+        <div class="contentHead">
+          <h2>Downloads</h2>
+        </div>
+        <div class="contentText">
+          <table>
+            <tr>
+              <th class="downloadTableCell">Description</th>
+              <th>File Format</th>
+            </tr>
+            <tr>
+              <td>
+                USS Truxtun and USS Pollux special event fillable certificate
+                for 2023.
+              </td>
+              <td>
+                <a
+                  id="pageLinks"
+                  href="downloads\USS Truxtun and USS Pollux special event certifcate 2023_1_.pdf"
+                  target="_blank"
+                  >pdf</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <a class="backLink" href="index.html">
+        <img
+          class="backImage"
+          src="assets\back.png"
+          alt="Button. Returns to main page"
         />
       </a>
     </div>

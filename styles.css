@@ -6,6 +6,7 @@
 
   --menuHighlight: #8dc540; /*#ffd100;*/
   --menuHover: #ffee32;
+  --linkHover: #88d18a;
 
   --menuContent: #16425b;
   --textColor: #d9dcd6;
@@ -311,4 +312,12 @@ a:visited {
 
 a:active {
   color: var(--menuHover);
+}
+
+#pageLinks:hover {
+  color: var(--linkHover);
+}
+
+.downloadTableCell {
+  width: 70%;
 }
